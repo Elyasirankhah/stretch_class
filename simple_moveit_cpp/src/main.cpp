@@ -41,8 +41,8 @@ int main(int argc, char** argv) {
     - joint_arm_l0
     - joint_wrist_yaw   <-- index 5
     */
-    joint_group_positions.at(0) = 0.4;  // Lift position
-    double dist = 0.5 / 4;              // Arm Extension / 4
+    joint_group_positions.at(2) = 0.5;  // Lift position
+    double dist = 0.5 / 6;              // Arm Extension / 4
     for (int i = 1; i < 5; i++) {
         joint_group_positions.at(i) = dist;
     }
