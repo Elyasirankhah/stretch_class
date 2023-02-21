@@ -41,12 +41,12 @@ int main(int argc, char** argv) {
     - joint_arm_l0
     - joint_wrist_yaw   <-- index 5
     */
-    joint_group_positions.at(0) = 0.4;  // Lift position
-    double dist = 0.5 / 4;              // Arm Extension / 4
-    for (int i = 1; i < 5; i++) {
+    joint_group_positions.at(2) = 0.67;  // Lift position
+    double dist = 0.1 / 6;              // Arm Extension / 4
+    for (int i = 1; i < 7; i++) {
         joint_group_positions.at(i) = dist;
     }
-    joint_group_positions.back() = 0;  // Gripper Yaw
+    joint_group_positions.back() = 1;  // Gripper Yaw
 
     // Set target values from the vector modified before
     move_group_arm.setJointValueTarget(joint_group_positions);
